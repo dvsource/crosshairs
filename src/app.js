@@ -4,16 +4,18 @@ const compression = require('compression');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-const { logger, successHandler, errorHandler } = require('./logger');
-const swagger = require('./swagger');
-const config = require('./config');
+const logger = require('./utils/logger');
+const morgon = require('./utils/morgon');
+const swagger = require('./utils/swagger');
+const config = require('./utils/config');
+const { errorConverter, errorHandler } = require('./utils/error');
 
 const weaponsRoute = require('./routes/weapons-route');
 
 const app = express();
 
-app.use(successHandler);
-app.use(errorHandler);
+app.use(morgon.successHandler);
+app.use(morgon.errorHandler);
 
 app.use(helmet());
 app.use(express.json());
@@ -24,6 +26,9 @@ app.use(cors());
 app.use('/api-docs', ...swagger);
 
 app.use('/weapons', weaponsRoute);
+
+app.use(errorConverter);
+app.use(errorHandler);
 
 mongoose
   .connect('mongodb://localhost:27017', {

@@ -1,6 +1,6 @@
 const winston = require('winston');
 const morgan = require('morgan');
-const config = require('./config.js');
+const config = require('./config');
 // LOGGER - winston
 
 const enumerateErrorFormat = winston.format((info) => {
@@ -59,4 +59,4 @@ const successHandler = morgan(successResponseFormat, {
   stream: { write: (message) => logger.info(message.trim()) },
 });
 
-module.exports = { logger, errorHandler, successHandler };
+module.exports = logger;

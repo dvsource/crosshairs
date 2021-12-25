@@ -2,6 +2,8 @@ const express = require('express');
 const winston = require('winston');
 const morgan = require('morgan');
 const helmet = require('helmet');
+const cors = require('cors');
+const compression = require('compression');
 
 const config = {
   env: 'development', // production | development
@@ -50,6 +52,9 @@ app.use(successHandler);
 app.use(errorHandler);
 
 app.use(helmet());
+
+app.use(compression());
+app.use(cors());
 
 const openapiSpecification = swaggerJsdoc(swaggerJsdocOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification, swaggerUIOoptions));

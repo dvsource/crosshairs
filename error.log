@@ -1,5 +1,0 @@
-[31merror[39m: GET /test 304 - 4.588 ms
-[31merror[39m: GET /test 304 - 1.933 ms
-[31merror[39m: GET /q 404 - 4.684 ms - message: -
-[31merror[39m: GET /docs 404 - 8.163 ms - message: -
-[31merror[39m: GET /docs/ 404 - 2.511 ms - message: -

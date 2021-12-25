@@ -118,3 +118,10 @@
 [32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 7.393 ms
 [32minfo[39m: GET /api-docs/swagger-ui-init.js 200 - 1.022 ms
 [32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 0.782 ms
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: GET /api-docs/ 304 - 14.984 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 9.546 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 9.802 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 8.608 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 200 - 0.649 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 0.849 ms

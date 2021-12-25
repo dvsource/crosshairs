@@ -1,6 +1,7 @@
 const express = require('express');
 const winston = require('winston');
 const morgan = require('morgan');
+const helmet = require('helmet');
 
 const config = {
   env: 'development', // production | development
@@ -47,6 +48,8 @@ const app = express();
 
 app.use(successHandler);
 app.use(errorHandler);
+
+app.use(helmet());
 
 const openapiSpecification = swaggerJsdoc(swaggerJsdocOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification, swaggerUIOoptions));

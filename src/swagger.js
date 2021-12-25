@@ -9,7 +9,7 @@ const swaggerJsdocOptions = {
       version: '1.0.0',
     },
   },
-  apis: ['./src/app*.js'], // files containing annotations as above
+  apis: ['./src/routes/*.js'], // files containing annotations as above
 };
 
 var swaggerUIOoptions = {

@@ -15,3 +15,106 @@
 [32minfo[39m: Listening to port 3200
 [32minfo[39m: GET /test 304 - 7.985 ms
 [31merror[39m: GET /q 404 - 4.684 ms - message: -
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[31merror[39m: GET /docs 404 - 8.163 ms - message: -
+[31merror[39m: GET /docs/ 404 - 2.511 ms - message: -
+[32minfo[39m: GET / 200 - 8.222 ms
+[32minfo[39m: GET /test 304 - 1.537 ms
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: GET /api-docs 301 - 9.925 ms
+[32minfo[39m: GET /api-docs/ 200 - 21.526 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 200 - 0.428 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 200 - 14.947 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 200 - 14.368 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 200 - 15.430 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 200 - 1.485 ms
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: GET /api-docs/ 304 - 15.067 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 6.722 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 7.291 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 8.112 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 304 - 0.461 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 0.854 ms
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: GET /api-docs/ 200 - 12.723 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 5.473 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 0.882 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 304 - 0.445 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 1.304 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 1.035 ms
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: GET /api-docs/ 304 - 14.610 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 7.293 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 7.924 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 8.180 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 200 - 0.656 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 1.069 ms
+[32minfo[39m: GET / 304 - 0.933 ms
+[32minfo[39m: GET /test 304 - 1.597 ms
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: GET /api-docs/ 304 - 21.348 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 4.237 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 200 - 0.694 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 7.791 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 9.230 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 1.100 ms
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: GET /api-docs/ 304 - 11.050 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 6.130 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 8.334 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 9.871 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 304 - 0.449 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 0.923 ms
+[32minfo[39m: GET /api-docs/ 304 - 2.397 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 1.502 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 2.890 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 5.463 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 304 - 0.394 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 0.867 ms
+[32minfo[39m: GET /api-docs/ 304 - 1.286 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 1.228 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 1.843 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 304 - 0.435 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 3.125 ms
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: GET /api-docs/ 304 - 12.046 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 5.560 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 2.310 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 200 - 1.071 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 5.263 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 1.028 ms
+[32minfo[39m: GET /api-docs/ 304 - 2.806 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 0.929 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 304 - 0.616 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 6.244 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 6.690 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 0.921 ms
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: GET /api-docs/ 304 - 10.850 ms
+[32minfo[39m: GET /api-docs/swagger-ui.css 304 - 6.935 ms
+[32minfo[39m: GET /api-docs/swagger-ui-bundle.js 304 - 6.798 ms
+[32minfo[39m: GET /api-docs/swagger-ui-standalone-preset.js 304 - 7.393 ms
+[32minfo[39m: GET /api-docs/swagger-ui-init.js 200 - 1.022 ms
+[32minfo[39m: GET /api-docs/favicon-32x32.png 304 - 0.782 ms

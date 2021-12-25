@@ -25,12 +25,42 @@ const successHandler = morgan(successResponseFormat, {
   stream: { write: (message) => logger.info(message.trim()) },
 });
 
+const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
+
+const swaggerJsdocOptions = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'Hello World',
+      version: '1.0.0',
+    },
+  },
+  apis: ['./src/app*.js'], // files containing annotations as above
+};
+
+var swaggerUIOoptions = {
+  explorer: true,
+};
+
 const app = express();
 
 app.use(successHandler);
 app.use(errorHandler);
 
-app.get('/test', (_, res) => res.send('test!!'));
+const openapiSpecification = swaggerJsdoc(swaggerJsdocOptions);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification, swaggerUIOoptions));
+
+/**
+ * @openapi
+ * /test:
+ *   get:
+ *     description: Testing an route
+ *     responses:
+ *       200:
+ *         description: Returns a mysterious string.
+ */
+app.get('/test', (_, res) => res.send('Hello World!'));
 
 app.listen(config.port, () => {
   logger.info(`Listening to port ${config.port}`);

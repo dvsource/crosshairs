@@ -1,8 +1,7 @@
 const express = require('express');
+const weaponsController = require('../controllers/weapons-controller');
 
 const router = express.Router();
-
-const WEAPONS_SOURCE = [];
 
 /**
  * @swagger
@@ -28,7 +27,7 @@ const WEAPONS_SOURCE = [];
  *       200:
  *         description: Wheapons list.
  */
-router.get('/', (req, res) => res.json(WEAPONS_SOURCE.filter((_) => _.code === req.query.code)));
+router.get('/', weaponsController.getWeapons);
 
 /**
  * @openapi
@@ -80,10 +79,7 @@ router.get('/', (req, res) => res.json(WEAPONS_SOURCE.filter((_) => _.code === r
  *       200:
  *         description: Status message
  */
-router.post('/', (req, res) => {
-  WEAPONS_SOURCE.push(req.body);
-  res.json({ message: 'SUCCESS' });
-});
+router.post('/', weaponsController.saveWeapon);
 
 /**
  * @openapi
@@ -103,7 +99,7 @@ router.post('/', (req, res) => {
  *       200:
  *         description: A wheapon details
  */
-router.get('/:code', (req, res) => res.json(WEAPONS_SOURCE.find((_) => _.code === req.params.code)));
+router.get('/:code', weaponsController.getWeapon);
 
 /**
  * @openapi
@@ -162,10 +158,7 @@ router.get('/:code', (req, res) => res.json(WEAPONS_SOURCE.find((_) => _.code ==
  *       200:
  *         description: Status message
  */
-router.put('/:code', (req, res) => {
-  WEAPONS_SOURCE[WEAPONS_SOURCE.findIndex((_) => _.code === req.params.code)] = req.body;
-  res.json({ message: 'SUCCESS' });
-});
+router.put('/:code', weaponsController.updateWeapon);
 
 /**
  * @openapi
@@ -185,12 +178,6 @@ router.put('/:code', (req, res) => {
  *       200:
  *         description: Status message
  */
-router.delete('/:code', (req, res) => {
-  WEAPONS_SOURCE.splice(
-    WEAPONS_SOURCE.findIndex((_) => _.code === req.params.code),
-    1
-  );
-  res.json({ message: 'SUCCESS' });
-});
+router.delete('/:code', weaponsController.deleteWeapon);
 
 module.exports = router;

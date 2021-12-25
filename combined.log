@@ -1,1 +1,17 @@
 [32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: Listening to port 3200
+[31merror[39m: GET /test 304 - 4.588 ms
+[31merror[39m: GET /test 304 - 1.933 ms
+[32minfo[39m: Listening to port 3200
+[32minfo[39m: GET /test 304 - 7.985 ms
+[31merror[39m: GET /q 404 - 4.684 ms - message: -

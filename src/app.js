@@ -4,11 +4,7 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
 const compression = require('compression');
-
-const config = {
-  env: 'development', // production | development
-  port: 3200,
-};
+const config = require('./config.js');
 
 // LOGGER - morgan
 

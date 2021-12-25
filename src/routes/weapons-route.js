@@ -83,7 +83,7 @@ router.post('/', weaponsController.saveWeapon);
 
 /**
  * @openapi
- * /weapons/:code:
+ * /weapons/{code}:
  *   get:
  *     summary: Load a wheapon
  *     description: Load a wheapon
@@ -103,7 +103,7 @@ router.get('/:code', weaponsController.getWeapon);
 
 /**
  * @openapi
- * /weapons/:code:
+ * /weapons/{code}:
  *   put:
  *     summary: Update a wheapon
  *     description: Update a wheapon
@@ -162,7 +162,7 @@ router.put('/:code', weaponsController.updateWeapon);
 
 /**
  * @openapi
- * /weapons/:code:
+ * /weapons/{code}:
  *   delete:
  *     summary: Delete a wheapon
  *     description: Delete a wheapon

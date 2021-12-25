@@ -1,17 +1,13 @@
-const WEAPONS_SOURCE = [];
+const weaponsRepository = require('../repositories/weapons-repository');
 
-const getWeapons = (code) => (code ? WEAPONS_SOURCE.filter((_) => _.code === code) : WEAPONS_SOURCE);
+const getWeapons = (code = null) => weaponsRepository.findWeapons(code);
 
-const getWeapon = (code) => WEAPONS_SOURCE.find((_) => _.code === code);
+const getWeapon = (code) => weaponsRepository.findWeapon(code);
 
-const saveWeapon = (weapon) => WEAPONS_SOURCE.push(weapon);
+const saveWeapon = (weapon) => weaponsRepository.saveWeapon(weapon);
 
-const updateWeapon = (code, weapon) => (WEAPONS_SOURCE[WEAPONS_SOURCE.findIndex((_) => _.code === code)] = weapon);
+const updateWeapon = (code, weapon) => weaponsRepository.updateWeapon(code, weapon);
 
-const deleteWeapon = (code) =>
-  WEAPONS_SOURCE.splice(
-    WEAPONS_SOURCE.findIndex((_) => _.code === code),
-    1
-  );
+const deleteWeapon = (code) => weaponsRepository.deleteWeapon(code);
 
 module.exports = { getWeapons, getWeapon, saveWeapon, updateWeapon, deleteWeapon };

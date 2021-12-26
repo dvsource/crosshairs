@@ -1,6 +1,6 @@
 const Weapon = require('../domains/weapon');
 
-const saveWeapon = (weapon) => new Weapon(weapon).save();
+const createWeapon = (weapon) => new Weapon(weapon).save();
 
 const findWeapons = (code) => Weapon.find(code ? { code } : code).exec();
 
@@ -10,4 +10,4 @@ const updateWeapon = (code, weapon) => Weapon.findOneAndReplace({ code }, weapon
 
 const deleteWeapon = (code) => Weapon.findOneAndDelete({ code }).exec();
 
-module.exports = { findWeapons, findWeapon, saveWeapon, updateWeapon, deleteWeapon };
+module.exports = { findWeapons, findWeapon, createWeapon, updateWeapon, deleteWeapon };

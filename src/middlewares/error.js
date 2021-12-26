@@ -1,21 +1,9 @@
 const mongoose = require('mongoose');
-const config = require('./config');
-const logger = require('./logger');
+const config = require('../utils/config');
+const logger = require('../utils/logger');
 const httpStatus = require('http-status');
-const Constants = require('./constants');
-
-class ApiError extends Error {
-  constructor(statusCode, message, isOperational = true, stack = '') {
-    super(message);
-    this.statusCode = statusCode;
-    this.isOperational = isOperational;
-    if (stack) {
-      this.stack = stack;
-    } else {
-      Error.captureStackTrace(this, this.constructor);
-    }
-  }
-}
+const Constants = require('../utils/constants');
+const ApiError = require('../utils/api-error');
 
 const errorConverter = (err, _, __, next) => {
   let error = err;

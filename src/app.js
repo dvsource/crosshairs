@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const morgon = require('./utils/morgon');
 const swagger = require('./utils/swagger');
-const { errorConverter, errorHandler } = require('./utils/error');
+const { errorConverter, errorHandler } = require('./middlewares/error');
 
 const weaponsRoute = require('./routes/weapons-route');
 

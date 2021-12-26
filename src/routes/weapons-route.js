@@ -1,5 +1,7 @@
 const express = require('express');
 const weaponsController = require('../controllers/weapons-controller');
+const weaponsValidator = require('../validators/weapon-validator');
+const validate = require('../middlewares/validate');
 
 const router = express.Router();
 
@@ -27,7 +29,7 @@ const router = express.Router();
  *       200:
  *         description: Wheapons list.
  */
-router.get('/', weaponsController.getWeapons);
+router.get('/', validate(weaponsValidator.getWeapons), weaponsController.getWeapons);
 
 /**
  * @openapi
@@ -79,7 +81,7 @@ router.get('/', weaponsController.getWeapons);
  *       200:
  *         description: Status message
  */
-router.post('/', weaponsController.saveWeapon);
+router.post('/', validate(weaponsValidator.createWeapon), weaponsController.createWeapon);
 
 /**
  * @openapi
@@ -99,7 +101,7 @@ router.post('/', weaponsController.saveWeapon);
  *       200:
  *         description: A wheapon details
  */
-router.get('/:code', weaponsController.getWeapon);
+router.get('/:code', validate(weaponsValidator.getWeapon), weaponsController.getWeapon);
 
 /**
  * @openapi
@@ -158,7 +160,7 @@ router.get('/:code', weaponsController.getWeapon);
  *       200:
  *         description: Status message
  */
-router.put('/:code', weaponsController.updateWeapon);
+router.put('/:code', validate(weaponsValidator.updateWeapon), weaponsController.updateWeapon);
 
 /**
  * @openapi
@@ -178,6 +180,6 @@ router.put('/:code', weaponsController.updateWeapon);
  *       200:
  *         description: Status message
  */
-router.delete('/:code', weaponsController.deleteWeapon);
+router.delete('/:code', validate(weaponsValidator.deleteWeapon), weaponsController.deleteWeapon);
 
 module.exports = router;

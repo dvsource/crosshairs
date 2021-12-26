@@ -7,7 +7,8 @@ const morgon = require('./utils/morgon');
 const swagger = require('./utils/swagger');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 
-const weaponsRoute = require('./routes/weapons-route');
+const usersRoutes = require('./routes/users-routes');
+const weaponsRoutes = require('./routes/weapons-routes');
 
 const app = express();
 
@@ -22,7 +23,8 @@ app.use(cors());
 
 app.use('/api-docs', ...swagger);
 
-app.use('/weapons', weaponsRoute);
+app.use('/users', usersRoutes);
+app.use('/weapons', weaponsRoutes);
 
 app.use(errorConverter);
 app.use(errorHandler);

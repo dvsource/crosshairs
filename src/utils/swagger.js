@@ -1,6 +1,10 @@
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
+/**
+ * @see https://github.com/Surnet/swagger-jsdoc
+ * @see https://github.com/scottie1984/swagger-ui-express
+ */
 const swaggerJsdocOptions = {
   definition: {
     openapi: '3.0.0',

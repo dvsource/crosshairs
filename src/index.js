@@ -6,7 +6,7 @@ const logger = require('./utils/logger');
 const Constants = require('./utils/constants');
 
 mongoose
-  .connect(config.monogoUrl, config.monogo)
+  .connect(config.monogoose.url, config.monogoose.options)
   .then(() => {
     logger.info(Constants.MESSAGE.SERVER.DB_CONNECTED);
     app.listen(config.port, () => {

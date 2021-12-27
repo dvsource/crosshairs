@@ -5,8 +5,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=pass
       - MONGO_INITDB_DATABASE=auth
-    ports:
-      - '27017:27017'
+
   mongo-express:
     image: mongo-express
     depends_on:
@@ -15,7 +14,18 @@ services:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
       - ME_CONFIG_MONGODB_ADMINPASSWORD=pass
       - ME_CONFIG_MONGODB_SERVER=mongodb
-      # - ME_CONFIG_BASICAUTH_USERNAME=admin
-      # - ME_CONFIG_BASICAUTH_PASSWORD=ihavealongpassword
     ports:
       - '8081:8081'
+
+  node-app:
+    container_name: crosshair-docker-test-container
+    image: crosshair-docker-test
+    environment:
+      - MONGODB_URL=mongodb://mongodb:27017
+    ports:
+      - '3100:3100'
+    volumes:
+      - '.:/usr/src/code'
+      - '/usr/src/code/node_modules'
+    depends_on:
+      - mongo-express
